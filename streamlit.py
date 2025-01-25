@@ -49,8 +49,8 @@ def main():
     product_name = st.text_input("Tell me the product name you are advertising for?")
     customization = st.text_input("Tell me how you want to customize your advertisement videos.")
 
-    # Enable button if either condition is met and both text inputs are filled
-    enable_download = (uploaded_file or terms_accepted) and product_name and customization
+    # Enable button if both upload and terms are accepted and text inputs are filled
+    enable_download = uploaded_file and terms_accepted and product_name and customization
     
     st.download_button(
         label="Download Your Video",
